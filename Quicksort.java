@@ -14,19 +14,19 @@ public class Quicksort {
         esquerda = inicio;
         direita = tamanho;
 
-        while (esquerda <= direita) {// garante que nao se colidam a esquerda e a direita
+        while (esquerda <= direita) {
             interacoes++;
 
-            while (lista[esquerda] < pivo) {//o código move o ponteiro esquerda enquanto o valor na posição esquerda é menor que o pivô.
+            while (lista[esquerda] < pivo) {
                 esquerda++;
                 interacoes++;
             }
-            while (lista[direita] > pivo) {// faz com que o ponteiro direita se mova enquanto o valor na posição direita for maior que o pivô
+            while (lista[direita] > pivo) {
                 direita--;
                 interacoes++;
             }
 
-            if (esquerda <= direita) {//realiza  a troca 
+            if (esquerda <= direita) {
                 int temp = lista[esquerda];
                 lista[esquerda] = lista[direita];
                 lista[direita] = temp;
@@ -37,10 +37,10 @@ public class Quicksort {
         }
 
         if (inicio < direita) {
-            quicksort(lista, inicio, direita);//faz a partição esquerda
+            quicksort(lista, inicio, direita);
         }
         if (esquerda < tamanho) {
-            quicksort(lista, esquerda, tamanho);//faz a partição direita
+            quicksort(lista, esquerda, tamanho);
         } else {
             listaf = lista;
         }
