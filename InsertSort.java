@@ -16,11 +16,11 @@ public class InsertSort {
 
             while (a > 0 && array[a - 1] > temp) {
                 interacoes++; 
-                array[a] = array[a - 1];//troca
-                a--;//decresimo para verificar o valor interior
+                array[a] = array[a - 1];
+                a--;
                 trocas++;
             }
-            array[a] = temp;// Insere o valor original na posição correta                                                                   
+            array[a] = temp;                                                         
         }
     }
 
