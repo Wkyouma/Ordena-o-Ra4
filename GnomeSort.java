@@ -13,14 +13,11 @@ public class GnomeSort {
  
         while (i < tamanho - 1) { 
             interacoes++;       
-
-     
             if (Gnome[i] > Gnome[i + 1]) {
                 int temp = Gnome[i];
                 Gnome[i] = Gnome[i + 1];
                 Gnome[i + 1] = temp;
                 trocas++;       
-
                 if (i > 0) {
                     i--;
                 }
@@ -32,7 +29,6 @@ public class GnomeSort {
 
     public static void main(String[] args) {
         int[] tamanhos = new int[]{1000, 10000, 100000, 500000, 1000000}; 
-
         for (int n : tamanhos) {
             System.out.println("Resultados para: " + n);
             Random random = new Random(101);  
